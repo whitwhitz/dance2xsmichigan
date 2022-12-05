@@ -13,6 +13,7 @@ h1{
     font-size: 2em;
     text-align: center;
     line-height: 2;
+    padding: 30px;
 }
   
 h2{
@@ -24,6 +25,7 @@ h2{
   
 h1 + p {
     text-align: center;
+    margin-bottom: 30px;
 }
   
 a.skip{
@@ -89,6 +91,11 @@ nav .current a{
     color: white;
 }
 
+header img #logo{
+    display: none;
+
+}
+
 
 footer{
     background-color: black;
@@ -121,12 +128,17 @@ footer{
     text-align: left;
 }
 
-.perform h2{
+.vault h2{
     text-align: left;
 }
 
 .learn h2{
     text-align: right;
+}
+
+.learn a, .vault a{
+    /* text-decoration: none; */
+    color: red;
 }
 
 
@@ -136,40 +148,66 @@ footer{
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    width: 85vw;
+    justify-self: center;
+    width: 90vw;
 }
 
 .conceptvid, .f22barnite, .w22urbanite, .w22barnite, .f21barnite{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     padding: 20px;
+    align-items: center;
 
+}
+
+
+.dance a{
+    color: red;
+    font-size: 25px;
+}
+
+.details{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
 }
 
 .performance img{
     border: 5px white solid;
-    max-width: 20vw;
-    max-height: 15vw;
+    max-width: 90vw;
+    max-height: 80vw;
 }
 
-.performance p{
+.performance ul{
     padding: 20px;
+    font-size: 18px;
+    text-align: center;
 }
+
+.performance h2{
+    margin-top: 20px;
+}
+
+
+
 /* THIS SECTION IS FOR THE ABOUT PAGE */
 
 #logo{
     display:block;
     margin: auto;
-    width: 300px;
-    height: 300px;
+    width: 100px;
+    height: 100px;
     align-self: center;
 }
-
 
 .description p{
     margin-left: 30px;
     margin-right: 30px;
     padding: 10px;
+}
+
+.about h2{
+    margin-top: 20px;
 }
   
 
@@ -188,20 +226,42 @@ footer{
     .gallery{
         grid-template-columns: 1fr 1fr 1fr;
     }
-
 }
 
 /* DESKTOP VIEW */
 
-@media screen and (min-width: 1200px){
-   
-    nav ul{
-        text-align: right;
-    }
+@media screen and (min-width: 1100px){
 
     .gallery{
         grid-template-columns: 1fr 1fr 1fr 1fr;
         max-width: 200em;
     }
 
+    #logo{
+        display:block;
+        margin: auto;
+        width: 300px;
+        height: 300px;
+        align-self: start;
+    }
+
+    .conceptvid, .f22barnite, .w22urbanite, .w22barnite, .f21barnite{
+        display: flex;
+        flex-direction: row;
+        padding: 20px;
+        align-items: center;
+    
+    }
+
+    .performance ul{
+        padding: 20px;
+        font-size: 18px;
+        text-align: start;
+    }
+
+    .performance img{
+        border: 5px white solid;
+        max-width: 30vw;
+        max-height: 18vw;
+    }
 }
