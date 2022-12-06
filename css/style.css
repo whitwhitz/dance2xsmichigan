@@ -23,7 +23,7 @@ h2{
     padding: 5px;
 }
   
-h1 + p {
+#logo2 + p {
     text-align: center;
     margin-bottom: 30px;
 }
@@ -60,7 +60,7 @@ ul{
 nav li {
     display: block;
     background-color: #ffffff;
-    margin: 30px;
+    margin: 15px;
     border: solid 2px;
     border-radius: 25px;
     padding: 8px 28px;
@@ -70,7 +70,7 @@ nav li {
 }
 
 nav a{
-    padding: 10px;
+    /* padding: 10px; */
     color: black;
     text-decoration: none;
 }
@@ -91,10 +91,9 @@ nav .current a{
     color: white;
 }
 
-header img #logo{
+/* header img #logo{
     display: none;
-
-}
+} */
 
 
 footer{
@@ -141,16 +140,12 @@ footer{
     color: red;
 }
 
+#logo2{
+    display:none;
+}
+
 
 /* THIS SECTION IS FOR THE PERFORMANCE PAGE */
-.performance{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    justify-self: center;
-    width: 90vw;
-}
 
 .conceptvid, .f22barnite, .w22urbanite, .w22barnite, .f21barnite{
     display: flex;
@@ -159,6 +154,9 @@ footer{
     align-items: center;
 }
 
+.conceptvid{
+    justify-content: center;
+}
 
 .dance a{
     color: red;
@@ -230,7 +228,7 @@ footer{
 
 /* TABLET VIEW */
 
-@media screen and (min-width: 840px){
+@media screen and (min-width: 700px){
    
     nav li {
         display: inline-block;
@@ -249,11 +247,13 @@ footer{
         max-width: 80vw;
         max-height: 70vw;
     }
+
+    
 }
 
 /* DESKTOP VIEW */
 
-@media screen and (min-width: 1100px){
+@media screen and (min-width: 1000px){
 
     .gallery{
         grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -261,18 +261,24 @@ footer{
     }
 
     #logo{
+        display:none;
+    }
+
+    nav ul{
+        text-align: right;
+    }
+
+    #logo2{
         display:block;
         margin: auto;
         width: 300px;
         height: 300px;
-        align-self: start;
+        align-self: center;
     }
 
     .conceptvid, .f22barnite, .w22urbanite, .w22barnite, .f21barnite{
-        display: flex;
         flex-direction: row;
-        padding: 20px;
-        align-items: center;
+       
     
     }
 
